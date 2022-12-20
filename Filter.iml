@@ -7,7 +7,7 @@
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/Filter/web/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
-          <root url="file://$MODULE_DIR$/Filter/web" relative="/" />
+          <root url="file://$MODULE_DIR$/Filter/src/main/webapp" relative="/" />
         </webroots>
       </configuration>
     </facet>
