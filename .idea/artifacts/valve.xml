@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="valve">
+    <output-path>$PROJECT_DIR$/out/artifacts/valve</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="valve" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="valve/web/Web" />
+    </root>
+  </artifact>
+</component>
