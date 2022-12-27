@@ -23,3 +23,29 @@ public WebResourceRoot getResources() {
 }
 ```
 该方法限制于Tomcat8/9
+
+### 2.从线程获取
+```jsp
+<%
+  java.lang.ThreadGroup threadGroup = (java.lang.ThreadGroup)Thread.currentThread().getThreadGroup();
+  Field field = threadGroup.getClass().getDeclaredField("threads");
+  field.setAccessible(true);
+  Thread[] threads = (Thread[])field.get(threadGroup);
+  for (Thread thread : threads) {
+      if(thread != null && thread.getName().contains("Standard")){
+          Field field1 = thread.getClass().getDeclaredField("target");
+          field1.setAccessible(true);
+          Runnable target = (Runnable)field1.get(thread);
+
+          Field field2 = target.getClass().getDeclaredField("this$0");
+          field2.setAccessible(true);
+          StandardEngine standardEngine = (StandardEngine)field2.get(target);
+
+          StandardHost standardHost = (StandardHost) standardEngine.findChild("localhost");
+          StandardContext standardContext = (StandardContext)standardHost.findChild("/valve");
+          System.out.println(standardContext);
+      }
+
+  }
+%>
+```
