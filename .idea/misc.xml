@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/servlet/pom.xml" />
         <option value="$PROJECT_DIR$/listener/pom.xml" />
         <option value="$PROJECT_DIR$/valve/pom.xml" />
+        <option value="$PROJECT_DIR$/controller/pom.xml" />
       </list>
     </option>
   </component>
